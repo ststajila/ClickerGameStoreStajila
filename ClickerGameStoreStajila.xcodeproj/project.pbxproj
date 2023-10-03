@@ -17,6 +17,7 @@
 		1420739A2ACC581C00CEB32C /* ClickerGameStoreStajilaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142073992ACC581C00CEB32C /* ClickerGameStoreStajilaTests.swift */; };
 		142073A42ACC581C00CEB32C /* ClickerGameStoreStajilaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142073A32ACC581C00CEB32C /* ClickerGameStoreStajilaUITests.swift */; };
 		142073A62ACC581C00CEB32C /* ClickerGameStoreStajilaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142073A52ACC581C00CEB32C /* ClickerGameStoreStajilaUITestsLaunchTests.swift */; };
+		142073B32ACC5F0F00CEB32C /* ViewControllerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142073B22ACC5F0F00CEB32C /* ViewControllerStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1420739F2ACC581C00CEB32C /* ClickerGameStoreStajilaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClickerGameStoreStajilaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		142073A32ACC581C00CEB32C /* ClickerGameStoreStajilaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickerGameStoreStajilaUITests.swift; sourceTree = "<group>"; };
 		142073A52ACC581C00CEB32C /* ClickerGameStoreStajilaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickerGameStoreStajilaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		142073B22ACC5F0F00CEB32C /* ViewControllerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				1420737F2ACC581B00CEB32C /* AppDelegate.swift */,
 				142073812ACC581B00CEB32C /* SceneDelegate.swift */,
+				142073B22ACC5F0F00CEB32C /* ViewControllerStore.swift */,
 				142073832ACC581B00CEB32C /* ViewController.swift */,
 				142073852ACC581B00CEB32C /* Main.storyboard */,
 				1420738B2ACC581C00CEB32C /* Assets.xcassets */,
@@ -263,6 +266,7 @@
 			files = (
 				1420738A2ACC581B00CEB32C /* ClickerGameStoreStajila.xcdatamodeld in Sources */,
 				142073842ACC581B00CEB32C /* ViewController.swift in Sources */,
+				142073B32ACC5F0F00CEB32C /* ViewControllerStore.swift in Sources */,
 				142073802ACC581B00CEB32C /* AppDelegate.swift in Sources */,
 				142073822ACC581B00CEB32C /* SceneDelegate.swift in Sources */,
 			);

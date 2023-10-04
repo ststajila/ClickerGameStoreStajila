@@ -10,10 +10,13 @@ import UIKit
 class ViewController: UIViewController {
 
     
+    @IBOutlet weak var clickButtonOutlet: UIButton!
     @IBOutlet weak var pointsOutlet: UILabel!
     var points = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.blue
         // Do any additional setup after loading the view.
     }
 

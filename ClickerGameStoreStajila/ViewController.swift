@@ -12,14 +12,19 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var clickButtonOutlet: UIButton!
     @IBOutlet weak var pointsOutlet: UILabel!
-    var points = 0
+    var points = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.blue
+        self.title = "Main"
+        
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        pointsOutlet.text = "\(points)"
+    }
     @IBAction func clickAction(_ sender: Any) {
         points += 1;
         pointsOutlet.text = "\(points)"
@@ -32,9 +37,10 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var nvc = segue.destination as! ViewControllerStore
+        let nvc = segue.destination as! ViewControllerStore
         
         nvc.storePoints = points
+        nvc.delegate = self
     }
     
 }

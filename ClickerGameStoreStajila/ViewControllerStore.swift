@@ -14,11 +14,16 @@ class ViewControllerStore: UIViewController {
    
     @IBOutlet weak var statusOutlet: UILabel!
     var delegate: ViewController!
+    let alert = UIAlertController(title: "Error", message: "You have not enough points for this option", preferredStyle: .alert)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.blue
         amountOutlet.text = "You have \(storePoints!) points"
         self.title = "Store"
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
         // Do any additional setup after loading the view.
     }
     
@@ -42,6 +47,8 @@ class ViewControllerStore: UIViewController {
         } else{
             statusOutlet.text = "You have not enough points for this option"
             statusOutlet.backgroundColor = UIColor.red
+            
+            present(alert, animated: true, completion: nil)
         }
         
     }
@@ -66,6 +73,8 @@ class ViewControllerStore: UIViewController {
         } else{
             statusOutlet.text = "You have not enough points for this option"
             statusOutlet.backgroundColor = UIColor.red
+            
+            present(alert, animated: true, completion: nil)
         }
         
     }

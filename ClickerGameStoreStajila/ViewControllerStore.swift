@@ -14,8 +14,12 @@ class ViewControllerStore: UIViewController {
    
     @IBOutlet weak var statusOutlet: UILabel!
     var delegate: ViewController!
+    
+    @IBOutlet weak var navigation: UINavigationItem!
+    
     let alert = UIAlertController(title: "Error", message: "You have not enough points for this option", preferredStyle: .alert)
     
+    let alert2 = UIAlertController(title: "Success", message: "Would you like to continue shoping?", preferredStyle: .actionSheet)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +28,16 @@ class ViewControllerStore: UIViewController {
         self.title = "Store"
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
+        
+        let stayAction = UIAlertAction(title: "Yes", style: .default, handler: nil)
+        let blah = UIAlertAction(title: "yea", style: .default) { alert in
+            <#code#>
+        }
+//        let goBackAction = UIAlertAction(title: "No", style: .default){performSegue(withIdentifier: "goBack", sender: self)
+//        }
+        
+//        alert2.addAction(goBackAction)
+//        alert2.addAction(stayAction)
         // Do any additional setup after loading the view.
     }
     
@@ -43,6 +57,7 @@ class ViewControllerStore: UIViewController {
             amountOutlet.text = "You have \(storePoints!) points"
             statusOutlet.text = "You lost half of your points"
             statusOutlet.backgroundColor = UIColor.red
+            present(alert2, animated: true,completion: nil)
         }
         } else{
             statusOutlet.text = "You have not enough points for this option"

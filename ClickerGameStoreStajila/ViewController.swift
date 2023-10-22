@@ -13,13 +13,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var clickButtonOutlet: UIButton!
     @IBOutlet weak var pointsOutlet: UILabel!
     var points = 0.0
+    let alert = UIAlertController(title: "Success", message: "You have enought points, would you like to go to the store?", preferredStyle: .actionSheet)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.blue
         self.title = "Main"
         
-        // Do any additional setup after loading the view.
+        let yesAction = UIAlertAction(title: "Yes", style: .default) { alert in
+            self.goToTheStore()
+        }
+        
+        let noAction = UIAlertAction(title: "No", style: .destructive, handler: nil)
+        
+        alert.addAction(noAction)
+        alert.addAction(yesAction)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -28,6 +36,10 @@ class ViewController: UIViewController {
     @IBAction func clickAction(_ sender: Any) {
         points += 1;
         pointsOutlet.text = "\(points)"
+        
+        if points == 20{
+            present(alert, animated: true)
+        }
     }
     
     
@@ -41,6 +53,11 @@ class ViewController: UIViewController {
         
         nvc.storePoints = points
         nvc.delegate = self
+    }
+    
+    func goToTheStore() -> Bool{
+        performSegue(withIdentifier: "toStore", sender: self)
+        return true
     }
     
 }

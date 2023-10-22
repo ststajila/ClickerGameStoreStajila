@@ -19,7 +19,7 @@ class ViewControllerStore: UIViewController {
     
     let alert = UIAlertController(title: "Error", message: "You have not enough points for this option", preferredStyle: .alert)
     
-    let alert2 = UIAlertController(title: "Success", message: "Would you like to continue shoping?", preferredStyle: .actionSheet)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,17 +28,6 @@ class ViewControllerStore: UIViewController {
         self.title = "Store"
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
-        
-        let stayAction = UIAlertAction(title: "Yes", style: .default, handler: nil)
-        let blah = UIAlertAction(title: "yea", style: .default) { alert in
-            <#code#>
-        }
-//        let goBackAction = UIAlertAction(title: "No", style: .default){performSegue(withIdentifier: "goBack", sender: self)
-//        }
-        
-//        alert2.addAction(goBackAction)
-//        alert2.addAction(stayAction)
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func firstAction(_ sender: Any) {
@@ -57,7 +46,6 @@ class ViewControllerStore: UIViewController {
             amountOutlet.text = "You have \(storePoints!) points"
             statusOutlet.text = "You lost half of your points"
             statusOutlet.backgroundColor = UIColor.red
-            present(alert2, animated: true,completion: nil)
         }
         } else{
             statusOutlet.text = "You have not enough points for this option"
@@ -93,15 +81,5 @@ class ViewControllerStore: UIViewController {
         }
         
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
